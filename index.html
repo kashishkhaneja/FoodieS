@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" , intital-scale="1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="css/bootstrap.css" />
+    <!--<link rel="stylesheet" href="css/bootstrap.css" />-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -24,11 +25,12 @@
     <nav>
       <label class="logo">FoodieS</label>
       <ul>
-        <li><a class="active">Home</a></li>
-        <li><a href="#">Seller</a></li>
+        <li><a class="#">Home</a></li>
+        <li><a href="#Form">Seller</a></li>
         <li><a href="#">Buyer</a></li>
-        <li><a href="#">Blogs</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li><a href="#Blog">Blogs</a></li>
+        <li><a href="#Contact">Contact Us</a></li>
+        <li><a href="#C">Log Out</a></li>
       </ul>
       <label id="icon">
         <i class="fas fa-bars"></i>
@@ -37,53 +39,249 @@
    
 
     <!--------------------Slider----------------------->
-
+    <section>
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="Images/food-background.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Welcome to FoodieS</h5>
-            <p>Food at affordable prices for Everyone.</p>
-          
-
+          <div class="carousel-item active">
+              <img src="Images/bgg.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                  <h5>Welcome to FoodieS</h5>
+                  <p>Zero Hunger is our GOAL.</p>
+              </div>
           </div>
+          <div class="carousel-item">
+              <img src="Images/background-buyer.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                  <h5> Want to check Food Availability?</h5>
+                  <p>Drop In your area's pin code in the search bar below and you are good to go.</p>
+              </div>
           </div>
-        </div>
-        <div class="carousel-item">
-          <img src="Images/background-buyer.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Confused? How to check the Avaiablility?</h5>
-            <p>Buyers, Put your Pin code in the search option and find food dishes Available nearby you.</p>
+          <div class="carousel-item">
+              <img src="Images/eee.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                  <h5>Are you a seller?</h5>
+                  <p>Fill in the Seller form and become one of our trusted sellers.</p>
+              </div>
           </div>
-        </div>
-        <div class="carousel-item">
-          <img src="Images/background-seller.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Hello! Sellers...</h5>
-            <p>Fill the form provided below to become a seller.</p>
-          </div>
-        </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
       </button>
       <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
       </button>
+  </div>
+  </section>
+
+  <!-----Seller Form----->
+  
+<a id="Form"> </a>
+<h2> FOOD DETAILS </h2>
+		<form name="Seller Form" id="register" action="send.php" method="post">
+		<div class="register">
+		<label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname"><br>
+		<label for="ptime"> Food Preparation Time:</label><br>
+		<input type="text" id="ptime" name="ptime"><br>
+		<label for="atime"> Food Available Time:</label><br>
+		<input type="text" id="atime" name="atime"><br>
+		<label for="items"> No. of Items: </label><br>
+		<input type="text" id="items" name="items"><br>
+		<label for="count"> Food per Head: </label><br>
+		<input type="text" id="count" name="count"><br>
+    <label for="count"> Price per Plate: </label><br>
+    <input type="text" id="count" name="count"><br>
+		<label for="vessel"> Need Vessels: </label><br>
+		<select name="vessel">
+			<option value="Y"> Yes </option>
+			<option value="N"> No </option>
+		</select><br>
+		<label for="vehicle"> Vehicle Required: </label><br>
+		<select name="vehicle">
+			<option value="2W"> 2 Wheeler</option>
+			<option value="4W"> 4Wheeler </option>
+		</select><br>
+		<label for="description"> Food Description </label><br>
+		<textarea name="description" cols="45" rows="5"> </textarea><br>
+		<input type="submit" name="submit" id="sub" value="Submit" />
+		<input type="reset" name="reset" id="reset" value="Reset" /><br>
+		</div>
+
+		
+		</form>
+  
+	
+    <!-------Blog--------->
+   
+	<br>
+	<a id="Blog"></a>
+	<div class="header">
+     <h2>Blogs</h2>
     </div>
 
+    <div class="row">
+    <div class="leftcolumn">
+    <div class="card">
+      <h2>Alternatives To Plastic That Can Reduce Your Plastic Footprint</h2>
+      <h5>June 16, 2021</h5>
+      
+      <p>Today, plastic is everywhere, from homes to oceans, from bottles and plastic bags to plastic cups and straws. This versatile material is in our appliances, computers, clothing, and so much more. Some of the most common places we find plastic are wrapped around the things we buy every day. After all, it’s an effective way to keep food and cosmetics clean and fresh.
+But plastic is also lurking in some little known places. When you take a careful look around your home, the sheer number of things you’ll find containing plastic may surprise you. 
+
+Best Alternatives to Plastic
+
+Would you like to see less plastic in your home and less plastic waste in the world? Here are some long-lasting plastic alternatives available right now.
+
+Stainless steel
+Tough and easy to clean, stainless steel options for reusable food and beverage storage have multiplied in recent years. You can replace single-use cups, kitchen storage, lunch boxes, and more with this durable metal.
+
+Glass
+While not biodegradable, glass is inert, inexpensive and infinitely recyclable. And since many food items come packaged in glass, upcycling glass jars into food storage is a no-cost way to give your food packaging new life. Jars from jam, honey, pickles, nut butters, and so much more can be added to your no-waste toolkit for shopping from the bulk bins. They can also be repurposed to store leftovers and homemade drinks, or decorated and turned into homemade gifts.
+
+Platinum silicone
+Made primarily of sand, food grade platinum silicone is flexible and durable. It’s also heat tolerant, so you can boil, bake, and cook in these products without danger of denaturing. Look for silicone products without plastic fillers.
+
+Beeswax-coated cloth
+Used primarily as a replacement for plastic wrap and plastic bags, beeswax-coated fabric is easy to use and easy to clean. It also smells great.
+
+Natural fiber cloth
+Natural cloth can replace plastic bags. Sustainable clothing made from organic cotton, wool, hemp, or bamboo won’t shed plastic fibers when washed. Felted or recycled wool is a versatile, safe, and compostable material for children’s toys, household containers, and more.
+
+Wood
+A renewable resource, wood from sustainably-managed forests can replace plastic in household items like cleaning brushes, kitchen utensils, and cutting boards.
+
+Bamboo
+This fast-growing renewable resource can replace plastic in items like tableware and drinking straws. It is lightweight, durable, and compostable.
+
+Pottery and Other Ceramics
+Around for millennia, pottery and other fired ceramics offer a stable, waterproof alternative that’s good for food storage and tableware. Look for non-toxic glazes.
+
+Paper
+In days gone by, many things were packaged in plain paper. And while better than plastic, paper can’t be recycled infinitely because every time it’s reused, the fibres get shorter, limiting its use. Luckily all paper except the glossy kind is safe to put in your home compost.
+
+Cardboard
+Cardboard is fully compostable at home as long as it’s not coated in, you guessed it, plastic. Many companies are now packaging their products in plain cardboard to cut down on waste. You can also use cardboard boxes to replace storage containers in your home.
+
+Keep in mind that anything you buy has an environmental footprint. Though longer lasting than plastic, things made from glass, metal, and so on still take energy to make and transport. For these swaps to make sense, you need to use them over and over and over again. Buying well-made, durable products will help ensure you get the most use from whatever you choose.
+ </p>
+    </div>
+	
+	<div class="card">
+      <h2>HOW NOT TO WASTE FOOD</h2>
+      <h5>Aug 21, 2019</h5>
+      <p>Food is something that provides nutrients, energy for activity, growth, and all body functions such as breathing, digesting food, keeping warm; materials for the growth andrepair of the body, and keeping the immune system healthy.
+Around the world, more than enough food is produced to feed the global
+population—but more than 690 million people still go hungry. After steadily declining for
+a decade, world hunger is on the rise, affecting 8.9 percent of people globally.
+Let’s not become the reason for world destruction in let’s just start saving food. Thinking
+how? Follow the following steps to contribute your bit towards food safety:
+1. Shop Smart: Most people tend to buy more food than they need. To avoid
+buying more food than you need, make frequent trips to the grocery store
+every few days rather than doing a bulk shopping trip once a week and
+stick to that list.
+2. Store Food Correctly: Improper storage leads to a massive amount of food
+waste. Foods that produce ethylene gas while ripening include Bananas,
+Avocados, Tomatoes, Cantaloupes, Peaches, Pears, and Green onions.
+Keep these foods away from ethylene-sensitive produce like potatoes, apples,
+leafy greens, berries, and peppers to avoid premature spoilage.
+3. Save Leftovers: Although many people save excess food from large
+meals, it is often forgotten in the fridge, then tossed when it goes bad.
+Storing leftovers in a clear glass container, rather than in an opaque
+container, helps ensure you don’t forget the food.
+4. Eat the Skin: People often remove the skins of fruits, veggies, and chicken
+when preparing meals. This is a shame because so many nutrients are
+located in the outer layer of produce and in poultry skin. For example,
+apple skins contain a large amount of fiber, vitamins, minerals, and
+antioxidants.
+5. Understand Expiration Dates: “sell by” and “expires on” are just two of the
+many confusing terms companies use on food labels to let consumers
+know when a product will most likely go bad. Do keep a check on it.
+BEFORE it expires eat the things out.
+Be thankful till you have food, never waste it. Give it away instead of wasting it. Today's
+wastage can turn out to be worse for your kids. Think wise, act wisely, and save food.</p>
+    </div>
+  </div>
+
+   <div class="rightcolumn">
+      <div class="card">
+       <h2>Sustainable development?</h2>
+       <h5>June 14, 2020</h5>
+       <p>>The concept of needs, comprising of the conditions for maintaining an acceptable life standard for all people.</p>
+       <p>  >The concept of limits of the capacity of the environment to fulfil the needs of the present and the future, determined by the state of technology and social organization.</p>
+
+           <p>There are many ways to designing but why sustainability?<br>
+          It focuses on meeting the needs of the present without compromising the ability of future generations to meet their needs.</p>
+
+             <p>Why sustainability?<br>
+                  To maintain environmental quantity, growth, as well as healthcare and its pillars, are the: economy, society, environment. 
+			 It can be directly proportional to the architecture, and in this, the most important goal is to make a building energy efficient for its lifetime by using design strategies that remove the negative environmental impact from a built environment. Sustainable construction is defined as “the creation and responsible management of a healthy built environment, based on resource-efficient and ecological principles”. Urban gardens, green roofs, courtyards not only help in preserving the environment but scientifically proven, it reduces depression also. Some fundamentals which are essential for cooling cities, producing oxygen, and filtering air pollution are parks, wetlands, lakes, forests, or other ecosystems, also providing safer routes for foot and bicycle communicators, a safe and healthy place for physical activities and recreation.</p>
+
+                 <p> "The starting point is not design, the starting point is sustainability"<br>
+               -STELLA McCARTNEY</p>
+	    
+      </div>
+    
+    
+   </div>
+</div>
+
+    <!-----------Contact Me---------------->
+    <section>
+    <br><br>
+	<a id="Contact"> </a>
+    <div class="contact-me"  >
+        <p>If You Have Any Problem, feel free to Contact Us</p>
+        <button><a href=" mailto: foodieCustomerSupport@gmail.com">  Contact Us  </a></button>
+    </div>
+
+    <!-----------Footer-------------->
+    
+    <footer>
+        <p>
+            Going-To Internet. Thank you for Visiting.
+        </p>
+        <br>
+        <p>Hope you liked our website and food. Do leave your Valuable feedback.
+
+        </p>
+        <!-----------Social Handles------->
+
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i> </a>
+            <a href="#"><i class="fab fa-whatsapp"></i> </a>
+            <a href="#"><i class="fab fa-linkedin"></i> </a>
+            <a href="#"><i class="fab fa-twitter"></i> </a>
+
+            <!----CopyRight------>
+            <p class="copyright">Copyright by Going-to Internet</p>
+
+        </div>
+
+    </footer>
+    <!---------Attached Social Bar------>
+    <div class="a-social-bar">
+        <a href="#"><i class="fab fa-facebook"></i> </a>
+            <a href="#"><i class="fab fa-whatsapp"></i> </a>
+            <a href="#"><i class="fab fa-linkedin"></i> </a>
+            <a href="#"><i class="fab fa-twitter"></i> </a>
+
+    </div>
+  </section>
 
 
 <!-------------------Bot------------->
-<script src="js/bootstrap.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+<!----<script src="js/bootstrap.js"></script>---->
     <script>
 
       window.watsonAssistantChatOptions = {

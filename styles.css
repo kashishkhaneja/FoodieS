@@ -3,15 +3,23 @@
     margin: 0;
     text-decoration: none;
     list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    
+    
+    
   }
   body {
     font-family: "Times New Roman", Times, serif;
+    background-color: #000;
   }
+  
   nav {
     height: 80px;
     width: 100%;
     background: #1a030a;
   }
+  
   label.logo {
     font-size: 35px;
     font-weight: bold;
@@ -116,7 +124,7 @@
    bottom: 0;
    right: 0;
    background: #000;
-   opacity: 0.4;
+   opacity: 0.5;
    
  }
  .carousel-caption{
@@ -132,3 +140,229 @@
    font-size: 18px;
    top: 2rem;
  }
+
+ #form{
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-size: 16px;
+ }
+
+ .register{
+  background: #000000;
+  width: 500px;
+  margin: 0px 0px 0px 430px;
+  color: white;
+  font-size: 18px;
+  padding: 20px;
+  border-radius: 10px;
+  margin: auto;
+ }
+ #register{
+   margin-left: 50px;
+
+ }
+ label{
+   color: #ffffff;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-size: 18px;
+
+ }
+ #name{
+   width: 300px;
+   border: none;
+   border-radius: 5px;
+   outline: 0;
+   padding: 7px;
+ }
+ #sub{
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  margin-left: 50px;
+ }
+ #reset{
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  margin-right: 50px;
+ }
+ 
+ .header {
+  padding: 15px;
+  font-size: 50px;
+  text-align: center;
+  background: #000;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #ffffff;
+  font-weight: bold;
+  align-items: center;
+
+
+   }
+    
+	.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+.rightcolumn {
+  padding: 100px;
+  background: #000;
+  position: relative;
+}
+.rightcolumn h2{
+  font-size: 3.5em;
+  margin-bottom: 10px;
+  color: #000;
+}
+.rightcolumn p{
+  font-size: 1.2em;
+  color: #000;
+}
+.card {
+  padding: 100px;
+  background: #000;
+  position: relative;
+ 
+  padding: 20px;
+  margin-top: 20px;
+  display: flex;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+  .contact-me{
+      width: 100%;
+      height: 200px;
+      background-image:url("https://www.color-hex.com/palettes/32325.png");
+      background-size:cover;
+      background-repeat: no-repeat;
+      display:flex;
+      flex-direction: column;
+      justify-content:center;
+      align-items: center;
+  }
+  .contact-me p{
+      color:#ffffff;
+      font-size:20px;
+      font-family:Arial, Helvetica, sans-serif;
+      font-weight:bold;
+      border-bottom: 2px solid #ffffff;
+
+  }
+  .contact-me button{
+      width: 200px;
+      height: 40px;
+      background-color: #ffffff;
+      outline: none;
+      border: none;
+      font-size: 16px;
+      font-weight:bold;
+      margin: 20px;
+  }
+  
+
+  footer{
+      height: 300px;
+      display:flex ;
+      flex-direction: column;
+      bottom: 5px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+
+  }
+  footer p{
+      font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  footer p:nth-child(1)
+  {
+      font-weight:30px;
+      font-weight:bold;
+     
+      color:#191919;
+      line-height: 10px;
+
+  }
+  footer p:nth-child(2){
+      font-size:16px ;
+      width: 600px;
+      color: #7e7d7d;
+      text-align: center;
+  }
+  .social-icons a{
+      width: 40px;
+      height: 40px;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #0a0909;
+      margin: 20px 10px;
+      border-radius: 50%;
+
+  }
+
+  .social-icons{
+      display: flex;
+      
+      
+  }
+  .copyright{
+      color:#565555;
+      font-size: 13px;
+      position: absolute;
+      left: 50%;
+      bottom: 5px;
+      transform: translateX(-50%);
+  }
+  .social-icons i,a.a-social-bar i{
+      background-color: #000000;
+      
+  }
+  .social-icons a:hover{
+      background-color: #000000;
+      box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+      transition: all ease 0.5s;
+
+  }
+
+  .social-icons a:hover i{
+      color: #fff;
+      transition: all ease 0.5s;
+  }
+  .a-social-bar{
+      position: fixed;
+      top: 50%;
+      right: 0px;
+      transform: translateY(-50%);
+  }
+  .a-social-bar a{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      padding: 0px;
+      margin: 0px;
+      line-height: 0px;
+      background-color: #ffffff;
+      border: 1px solid #cbcbcb;
+      box-shadow:2px 2px 2px rgba(0,0 ,0,0.2) ;
+  }
+  .a-social-bar i{
+      color: #2b2b2b;
+      font-size: 20px;
+
+  }
